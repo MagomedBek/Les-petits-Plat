@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:stretch
+    
+}
+#logo{
+    padding-top: 2%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+#searchzone{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: #D0D0D0;
+}
+#seaurch{
+    
+    opacity: 0.4;
+    padding: 10px;
+    border-radius: 2px;
+    border: 0;
+    flex: auto;
+}
+#logo img{
+    width: 50%;
+}
+
+#tagzone{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 0% 5%;
+    min-height: 50px;
+}
+
+#tagzone span{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    margin: 1%;
+    padding: 1%;
+    gap:10px;
+    border-radius: 5px;
+    
+}
+#filtres{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+   
+}
+.filtre{
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.filtre .filtresearch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px;
+    padding: 12px;
+    border-radius: 5px ;
+}
+.filtre input{
+    border: 0;
+    padding: 10px;
+    background-color: inherit;
+}
+
+.clicked{
+    transform: rotate(180deg);
+}
+.filtre input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+.filtre #ingredients,.filtre .ingredients, #tagzone .ingredients{
+    background-color: blue;
+    color: white;
+}
+
+.filtre #appareils,.filtre .appareils, #tagzone .appareils{
+    background-color: green;
+    color: white;
+}
+
+.filtre #ustensils,.filtre .ustensils, #tagzone .ustensils{
+    background-color: red;
+    color: white;
+}
+
+.list{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 0 0 5px 5px  ;
+}
+.show{
+    display: flex;
+}
+.list span{
+    width: 33%;
+
+}
+
+.list span:hover{
+    cursor: pointer;
+}
+
+.list span.hide{
+    display: none;
+}
+#dishSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dishCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30%;
+    height: auto;
+    background-color: grey;
+    margin: 30px;
+    
+}
+
+.imgBlock{
+    background-color: black;
+    min-height: 250px;
+   
+}
+
+.infocard{
+    height: auto;
+}
+.infocard .dishTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.infocard .desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.desc .cooking{
+    width: 50%;
+    
+}
+
+.desc p, .DishIngridients p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}

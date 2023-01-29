@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/506c6c8a44.js" crossorigin="anonymous"></script>
+    <title>Les Petits Plats</title>
+    
+</head>
+<body>
+    <header>
+        <a href="#" id="logo"><img src="img/logo.png" alt="logo" ></a></a>
+        <div id="searchzone">
+            <input name="s" placeholder="Rechercher une recette..." type="search" id="seaurch">
+            <i class="fas fa-search"></i>
+        </div>
+        <div id="tagzone">
+        </div>
+        <div id="filtres">
+            <div class="filtre">
+                <div class ="filtresearch" id="ingredients">
+                <input name="ingredients" placeholder="ingredients" type="search"  >
+                <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class=" list ingredients" data-type="ingredients">
+                </div>
+            </div>
+            
+         
+            <div class="filtre">
+                <div class ="filtresearch" id="appareils">
+                <input name="appareils" placeholder="appareils" type="search"  >
+                <i class="fas fa-angle-down"></i>  
+                </div>
+                <div class="list appareils" data-type="appareils">
+                </div>
+            </div>
+           
+        
+            <div class="filtre">
+                <div class ="filtresearch" id="ustensils">
+                <input name="ustensils" placeholder="ustensils" type="search"  >
+                <i class="fas fa-angle-down"></i>
+                </div>
+                <div class=" list ustensils" data-type="ustensils">
+                </div>
+            </div>
+               
+            
+        </div>
+
+    
+    </header>
+
+    <main>
+        <div id="dishSection">
+
+        </div>    
+    </main>
+    <script src="scripts/factories/dish.js"></script>
+    <script src="scripts/pages/tagzone2.js"></script>
+    <script src="scripts/pages/index.js"></script>
+    <script src="scripts/pages/search.js"></script>
+    <script src="scripts/pages/tagSearch.js"></script>
+</body>
+</html>
