@@ -134,9 +134,10 @@ header{
 .dishCard{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:start;
+    gap: 10%;
     width:30%;
-    height: auto;
+    height: 500px;
     background-color: grey;
     margin: 30px;
     
@@ -149,12 +150,12 @@ header{
 }
 
 .infocard{
-    height: auto;
+    padding: 0 5%;
 }
 .infocard .dishTitle{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .infocard .desc{
