@@ -10,7 +10,7 @@ function dishFactory(data){
                     <div class="infocard">
                         <div class="dishTitle">
                             <h2>${name}</h2>
-                            <p>${time}</p>
+                            <span>${time} <i class="far fa-clock"></i> min</span>
                         </div>
                         <div class="desc">
                             <div class="DishIngridients">
@@ -19,7 +19,7 @@ function dishFactory(data){
                             <div class="cooking">
                                 <p>${description}</p>
                             </div>
-                        <div>
+                        
                     </div>
 
 
