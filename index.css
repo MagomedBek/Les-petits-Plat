@@ -1,9 +1,15 @@
 *{
     padding: 0;
-    margin: 0;
+    margin:  0 ;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    
 
 }
-
+body{
+    width: 90%;
+    margin: auto;
+}
 header{
     display: flex;
     flex-direction: column;
@@ -18,19 +24,30 @@ header{
     justify-content: center;
 }
 #searchzone{
+    
     display: flex;
     justify-content: flex-start;
-    align-items: baseline;
-    background-color: #D0D0D0;
+    align-items: center;
+    background-color: #E7E7E7;
+    font-size: large;
+    padding: 0 1%;
+    height: 60px;
 }
 #seaurch{
-    
-    opacity: 0.4;
     padding: 10px;
     border-radius: 2px;
     border: 0;
     flex: auto;
+    background-color: inherit;
 }
+
+#seaurch::-webkit-input-placeholder {
+    color: #ccc;
+   } 
+   #seaurch::-moz-placeholder {
+    color: #ccc;
+   }
+
 #logo img{
     width: 50%;
 }
@@ -79,6 +96,7 @@ header{
     border: 0;
     padding: 10px;
     background-color: inherit;
+    font-size: larger;
 }
 
 .clicked{
@@ -89,32 +107,38 @@ header{
     opacity: 1; /* Firefox */
   }
 .filtre #ingredients,.filtre .ingredients, #tagzone .ingredients{
-    background-color: blue;
+    background-color: #3282F7;
     color: white;
 }
 
 .filtre #appareils,.filtre .appareils, #tagzone .appareils{
-    background-color: green;
+    background-color: #68D9A4;
     color: white;
 }
 
 .filtre #ustensils,.filtre .ustensils, #tagzone .ustensils{
-    background-color: red;
+    background-color: #ED6454;
     color: white;
 }
 
 .list{
     display: none;
+    padding: 2%;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     border-radius: 0 0 5px 5px  ;
+    gap:10px 0;
 }
 .show{
     display: flex;
 }
 .list span{
     width: 33%;
-
+    font-size: larger;
+    color: #FFFF;
+    flex-grow: 1;
+    
 }
 
 .list span:hover{
@@ -128,34 +152,47 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 50px 0;
 }
 
 .dishCard{
     display: flex;
     flex-direction: column;
     justify-content:start;
-    gap: 10%;
     width:30%;
     height: 500px;
-    background-color: grey;
-    margin: 30px;
+    background-color: #E7E7E7;
+    margin-top: 30px;
     
 }
 
 .imgBlock{
-    background-color: black;
+    background-color: #C7BEBE;
     min-height: 250px;
-   
+   margin: 0;
 }
 
 .infocard{
     padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-around;
+    align-items: baseline;
 }
 .infocard .dishTitle{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.infocard .dishTitle h2{
+   max-width: 80%;
+
 }
 
 .infocard .desc{
@@ -167,13 +204,15 @@ header{
 
 .desc .cooking{
     width: 50%;
+    font-family: 'Roboto', sans-serif;
     
 }
 
-.desc p, .DishIngridients p{
+.desc .cooking p{
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    font-family: 'Roboto', sans-serif;
 }

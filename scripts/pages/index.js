@@ -11,8 +11,8 @@ async function displayData(recipes) {
     recipes.forEach((recipe) => {
         const dishModel = dishFactory(recipe);
         const dishCardDOM = dishModel.getDishCard();
-       
         dishSection.innerHTML+=dishCardDOM;
+        dishModel. correction();
     });
 };
 
@@ -23,6 +23,7 @@ async function init() {
     // Récupère les datas des recipes
       recipes  = await getDish();
     displayData(recipes);
+   
     //filtres(recipes)
     displayLists(recipes);
     const lists = document.querySelectorAll(".filtre .list");
