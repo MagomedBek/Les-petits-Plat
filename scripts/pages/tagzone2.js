@@ -29,6 +29,22 @@ function displayLists(recipes) {
 
 function showlist(list){
    let button = list.closest(".filtre").querySelector(".filtresearch i");
+   let key = list.closest(".filtre").querySelector(".filtresearch input");
+   
+  
+   key.addEventListener("keyup", () => {
+    let listLength = list.querySelectorAll("span").length;
+     console.log(listLength)
+    if(key.value.toLowerCase().length>=3  && listLength > 0){
+        list.classList.add("show");
+        button.classList.add("clicked");
+       }else{
+             list.classList.remove("show");
+            button.classList.remove("clicked");
+       }
+
+   })
+   
    button.addEventListener("click",() => {
         console.log("test")
         if(list.classList.contains("show")){
@@ -37,7 +53,7 @@ function showlist(list){
         }else{
             lists.forEach(list => {
                 list.classList.remove("show");
-                let fleche = list.closest(".filtre").querySelector(".filtresearch i");
+                let fleche = list.closest(".filtre").querySelector(".filtresearch ");
                 fleche.classList.remove("clicked");
             })
             list.classList.add("show")
