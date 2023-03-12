@@ -17,7 +17,7 @@ async function displayData(recipes) {
 };
 
 
-  
+ 
 let recipes = [];
 async function init() {
     // Récupère les datas des recipes
