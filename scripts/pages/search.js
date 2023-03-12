@@ -2,17 +2,18 @@ function search() {
     let key = document.querySelector("#seaurch").value.toLowerCase();
      dishSection.innerHTML = "";
      let result = [];
-     for(let recipe of recipes) {
-          const name = recipe.name.toLowerCase();
-          const description = recipe.description.toLowerCase();
-          const ingredients = recipe.ingredients.map(ingredient => ingredient.ingredient.toLowerCase());
-          /// console.log(ingredients) ;
-          
-              if (  name.includes(key) || description.includes(key) || ingredients.includes(key)) {
-                  result.push(recipe);
-                  console.log("clé:"+key +"length:"+ key.length);
-              }
-     }
+     recipes.forEach((recipe) => {
+         const name = recipe.name.toLowerCase();
+         const description = recipe.description.toLowerCase();
+         const ingredients = recipe.ingredients.map(ingredient => ingredient.ingredient.toLowerCase());
+         /// console.log(ingredients) ;
+         
+             if (  name.includes(key) || description.includes(key) || ingredients.includes(key)) {
+                 result.push(recipe);
+                 console.log("clé:"+key +"length:"+ key.length);
+             }
+ 
+     })
      tagFilter.forEach(tag =>{
          switch(tag.type){
              case "ingredients":
@@ -57,3 +58,4 @@ function search() {
          }
      });
  }
+ 
