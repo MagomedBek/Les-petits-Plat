@@ -29,12 +29,15 @@ function dishFactory(data){
 
   
     function correction(){
-        let  ingList = document.querySelectorAll(".dishIngridients p") 
+        let  ingList = document.querySelectorAll(".dishIngridients p");
+        
          ingList.forEach((unit) =>{
-            if(unit.textContent.includes("grammes")){
-                 unit.textContent = unit.textContent.replace("grammes","g");
-            }else if(unit.textContent.includes("cuillères à soupe")){
-                unit.innerHTML =unit.textContent.replace("cuillères à soupe","cuillère(s)");
+            let text = unit.lastChild;
+            if(text.textContent.includes("grammes")){
+                text.textContent = text.textContent.replace("grammes","g");
+               console.log(unit.lastChild)
+            }else if(text.textContent.includes("cuillères à soupe")){
+                text.textContent =text.textContent.replace("cuillères à soupe","cuillère(s)");
             }
          } )    
      
