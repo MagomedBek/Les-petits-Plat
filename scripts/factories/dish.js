@@ -15,7 +15,7 @@ function dishFactory(data){
                         </div>
                         <div class="desc">
                             <div class="dishIngridients">
-                            ${ingredients.map(ingredient =>`<p><b>${ingredient.ingredient+':'??''}</b>${ingredient.quantity??''} ${ingredient.unit??''}</p>`).join("")}
+                            ${ingredients.map(ingredient =>`<p><b>${ingredient.ingredient +':'??''}</b>${ingredient.quantity??''} ${ingredient.unit??''}</p>`).join("")}
                             </div>
                             <div class="cooking">
                                 <p>${description}</p>
@@ -32,7 +32,7 @@ function dishFactory(data){
         let  ingList = document.querySelectorAll(".dishIngridients p") 
          ingList.forEach((unit) =>{
             if(unit.textContent.includes("grammes")){
-                 unit.innerHTML =unit.textContent.replace("grammes","g");
+                 unit.textContent.split("grammes","g");
             }else if(unit.textContent.includes("cuillères à soupe")){
                 unit.innerHTML =unit.textContent.replace("cuillères à soupe","cuillère(s)");
             }
