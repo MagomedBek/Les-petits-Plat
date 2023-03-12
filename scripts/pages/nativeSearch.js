@@ -2,7 +2,7 @@ function search() {
     let key = document.querySelector("#seaurch").value.toLowerCase();
      dishSection.innerHTML = "";
      let result = [];
-     for(let recipe of recipes) {
+     for(let recipe of recipe) {
           const name = recipe.name.toLowerCase();
           const description = recipe.description.toLowerCase();
           const ingredients = recipe.ingredients.map(ingredient => ingredient.ingredient.toLowerCase());

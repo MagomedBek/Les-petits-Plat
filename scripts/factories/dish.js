@@ -32,7 +32,7 @@ function dishFactory(data){
         let  ingList = document.querySelectorAll(".dishIngridients p") 
          ingList.forEach((unit) =>{
             if(unit.textContent.includes("grammes")){
-                 unit.textContent.split("grammes","g");
+                 unit.textContent = unit.textContent.replace("grammes","g");
             }else if(unit.textContent.includes("cuillères à soupe")){
                 unit.innerHTML =unit.textContent.replace("cuillères à soupe","cuillère(s)");
             }
