@@ -15,7 +15,7 @@ function dishFactory(data){
                         </div>
                         <div class="desc">
                             <div class="dishIngridients">
-                            ${ingredients.map(ingredient =>`<p><b>${ingredient.ingredient +':'??''}</b> ${ingredient.quantity??''} ${ingredient.unit??''}</p>`).join("")}
+                            ${ingredients.map(ingredient =>`<p><b>${ingredient.ingredient+':'??''}</b>${ingredient.quantity??''} ${ingredient.unit??''}</p>`).join("")}
                             </div>
                             <div class="cooking">
                                 <p>${description}</p>
